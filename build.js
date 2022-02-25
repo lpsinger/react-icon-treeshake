@@ -6,5 +6,8 @@ await esbuild.build({
   entryPoints: ['index.mdx'],
   outfile: 'output.js',
   format: 'esm',
-  plugins: [mdx({})]
+  minify: true,
+  platform: 'browser',
+  plugins: [mdx({})],
+  treeShaking: true
 })
